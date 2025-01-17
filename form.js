@@ -38,6 +38,9 @@ const modalImage = document.getElementById('modalImage');
 const modalCallButton = document.getElementById('modalCallButton');
 const closeModal = document.getElementById('closeModal');
 
+
+// sayfa yenilenince kayıtlı tüm datalar ekranda kalmaya devam edecek.localstorage a kaydet.
+
 function saveRecord() {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
@@ -45,12 +48,6 @@ function saveRecord() {
     const photo = uploadedImage.src;
 
     const record = { name, email, phone, photo };
-
-
-
-
-
-
 
     let records = JSON.parse(localStorage.getItem('records')) || [];
     records.push(record);
